@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>GUESS MY NUMBER</title>
+  </head>
+  <body>
+    <button class="show-modal">INFO</button>
+    <header>
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h1>How to Play the Number Guessing Game</h1>
+        <ol>
+          <li>
+            <strong>Start a New Game</strong>:
+            <ul>
+              <li>
+                Click on the "Again!" button to reset the game and start fresh.
+                The game will randomly generate a new secret number between 1
+                and 20.
+              </li>
+              <li>
+                The number of attempts you have is displayed as "score," and it
+                will start at 5.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Make a Guess</strong>:
+            <ul>
+              <li>
+                Enter your guess (a number between 1 and 20) in the input box
+                and click on the "Check!" button.
+              </li>
+              <li>
+                If you do not enter a number, you will see the message "NO
+                NUMBER".
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Receive Feedback</strong>:
+            <ul>
+              <li>
+                If your guess is correct, the message will change to "CORRECT
+                NUMBER!!!!!🥳". The background color will turn green, and your
+                score will be doubled.
+              </li>
+              <li>
+                If your guess is too high, the message will display "HIGH". Your
+                number of attempts will decrease by one.
+              </li>
+              <li>
+                If your guess is too low, the message will display "LOW". Your
+                number of attempts will decrease by one.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>End of Game</strong>:
+            <ul>
+              <li>
+                If you guess the correct number within the allowed attempts,
+                your score will be displayed and compared to the high score.
+              </li>
+              <li>If your score exceeds the high score, it will be updated.</li>
+              <li>
+                If you run out of attempts, the message "YOU LOST😔" will be
+                displayed, and the background will turn red.
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+      <div class="overlay hidden"></div>
+      <h1>GUESS MY NUMBER</h1>
+      <p>(Between 1 to 20)</p>
+      <button class="btn again">PLAY AGAIN!</button><br />
+      <div class="number">?</div>
+    </header>
+    <main>
+      <section class="left">
+        <input type="number" class="guess" placeholder="Guess It!" />
+        <button class="btn check">CHECK</button>
+      </section>
+      <section class="right">
+        <p class="message">Make Your Guess</p>
+        <p class="c1">Attempts Left: <span class="score">5</span></p>
+        <p class="c1">SCORE: <span class="highscore">0</span></p>
+        <p class="c1">HIGHSCORE: <span class="Highscore">0</span></p>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
